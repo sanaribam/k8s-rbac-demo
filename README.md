@@ -84,3 +84,10 @@ kubectl auth can-i watch pods --as=jerry --namespace=default
 kubectl auth can-i list pods --as=jerry --namespace=default
 ```
 
+### Checking Permissions for Service Account tom-sa
+
+```bash
+kubectl auth can-i create pods --as=system:serviceaccount:default:tom-sa
+kubectl auth can-i delete pods --as=system:serviceaccount:default:tom-sa
+```
+
